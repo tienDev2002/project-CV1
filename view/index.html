@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css" integrity="sha512-uBLaY+6crwV4JAHILx0HWvYncrX7TXL770hqxly0ZsQ199v4lr2yNB2jiPMoxNajFPHSQnU80B1O8dJLujWZMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/base.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="app">
+        <div class="header">
+            <div class="header__logo"><i class="fa-solid fa-language"></i>Translate</div>
+        </div>
+        <div class="main">
+            <form action="#">
+            <div class="get__lang-code">
+                <div class="get__course-code">
+                    <button id="cl-1" class="course-code" value="vi" onclick="select(event, id, value)">VietNam</button>
+                    <button id="cl-2" class="course-code selected" value="en" onclick="select(event, id, value)">English</button>
+                    <button class="show_up" onfocusout="turn_Off('course', event)">
+                        <i class="fa-solid fa-angle-down show__lang-code"></i>
+                        <div class="get_lick" id='c-off' onclick="show_CourseCode(event, id)" ></div>
+                    </button>
+                    </div>
+                    <div class="switch__lang-code">
+                        <i class="fa-solid fa-arrow-right-arrow-left" onclick="switchFunction()"></i>
+                    </div>
+                    <div class="get__target-code">
+                        <button id="tl-1" class="target-code selected" value="vi" onclick="select(event, id, value)">VietNam</button>
+                        <button id="tl-2" class="target-code" value="en" onclick="select(event, id, value)">English</button>
+                        <button class="show_up" onfocusout="turn_Off('target', event)">
+                            <i class="fa-solid fa-angle-down show__lang-code"></i>
+                            <div class="get_lick" id='t-off' onclick="show_CourseCode(event, id)"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="translate">
+                    <div class="form__input">
+                        <textarea class="form__input-area" placeholder="Chuỗi Cần Dịch" rows="1"></textarea>
+                    </div>
+                    
+                   <div class="show__result">
+                       <textarea class="result" placeholder="Bản Dịch" value="" readonly></textarea>
+                   </div>
+                   
+                </div>
+                <div class="show_course-code hide"></div>
+                <div class="show_target-code hide"></div>
+
+                <div class="actions">
+                    <button class="btnTranslate">Translate</button>
+                    <div class="history"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <div class="save"><i class="fa-solid fa-volume-high"></i></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="../assets/js/index.js"></script>
+    <script src="../assets/js/handleFunction.js"></script>
+</body>
+</html>

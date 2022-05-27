@@ -1,0 +1,210 @@
+/* Header Style */
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #fafafa;
+    margin-bottom: 50px;
+}
+
+.header__logo {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: var(--color-text-primary);
+}
+
+.header__logo i {
+    margin-right: 10px;
+}
+/* ################################ */
+
+/* Form Style */
+form {
+    width: 80%;
+    margin: auto;
+    border: 2px solid var(--border-parimay);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.get__lang-code {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid var(--border-parimay);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.get__course-code, .get__target-code {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.get__course-code {
+    justify-content: flex-end;
+}
+
+.get__target-code {
+    justify-content: flex-start;
+}
+
+.get__course-code > select, .get__target-code > select {
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/* ########################## */
+
+/* Button Style */
+.course-code, .target-code {
+    border: 2px solid var(--border-parimay);
+    border-radius: 10px;
+    padding: 5px;
+    color: #757575;
+    background-color: #fff; 
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.course-code:hover, .target-code:hover{
+    color: var(--color-text-primary);
+    border: none;
+}
+
+#target-code, #course-code {
+    border: none;
+}
+
+#target-code:focus, #course-code:focus {
+    outline: none;
+}
+
+.selected{
+    background-color: var(--border-parimay);
+    color: var(--white);
+}
+
+/* ########################## */
+
+/* Input area and Result area */
+.form__input, .show__result  {
+    width: 50%;
+    padding: 20px 50px 20px 24px;
+}
+
+.form__input {
+    border-right: 2px solid var(--border-parimay);
+}
+
+.form__input-area, .result {
+    width: 100%;
+    height: 74px;
+    font-size: 1.6rem;
+    resize: none;
+    border: none;
+}
+
+.form__input-area:focus, .result:focus {
+    outline: none;
+}
+/* ################### */
+
+/* Menu code languages */
+.show__lang-code {
+    font-size: 18px;
+}
+
+.show_up {
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid var(--border-parimay);
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+}
+
+.get_lick {
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    top: -2px;
+    z-index: 9;
+    left: -2px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Languages code */
+
+.list_target-code, .list_course-code  {
+    display: flex;
+    position: relative;
+    top: -131px;
+    right: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1075px;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.list_code-items {
+    height: 25px;
+    width: 200px;
+    text-align: left;
+    padding: 20px;
+    line-height: 0;
+    text-transform: lowercase;
+    border-right: 2px solid #a2c4f3;
+    border-bottom: 2px solid #a2c4f3;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: background-color 1s linear;
+}
+
+.list_code-items:hover {
+    background-color: var(--border-parimay);
+    border: none;
+    color: #fff
+}
+
+/* Button Translate */
+.translate {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.course-code:active {
+    color: black
+}
+
+.switch__lang-code {
+    width: 40px;
+    height: 40px;
+}
+
+.switch__lang-code > i {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+    line-height: 40px;
+}
+.switch__lang-code:hover {
+    border: 2px solid var(--border-parimay);
+    border-radius: 50%;
+    background-color: #fafafa;
+}
